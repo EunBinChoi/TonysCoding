@@ -1,0 +1,80 @@
+import java.util.Scanner;
+public class Sort {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a, b, c;
+		int max, mid, min;
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("***** 3 integer values Sorting Program *****");
+		
+		System.out.print("Input integer: ");
+		a = input.nextInt();
+
+		System.out.print("Input integer: ");
+		b = input.nextInt();
+	
+		System.out.print("Input integer: ");
+		c = input.nextInt();
+		
+		if (a < b) {
+			if (a < c) {
+				if (b < c) {
+					max = c;
+					mid = b;
+					min = a;
+					System.out.print("Sorted: " + min + " " + mid + " " + max);
+					
+				}
+				else {
+					max = b;
+					mid = c;
+					min = a;
+					System.out.print("Sorted: " + min + " " + mid + " " + max);
+				}
+			}
+			
+			else {
+				max = b;
+				mid = a;
+				min = c;
+				System.out.print("Sorted: " + min + " " + mid + " " + max);
+			}
+			
+		}
+		
+		else {
+			if (a > c) {
+				if (b > c) {
+					max = a;
+					mid = b;
+					min = c;
+					
+					System.out.print("Sorted: " + min + " " + mid + " " + max);
+					
+				}
+				else {
+					max = a;
+					mid = c;
+					min = b;
+					
+					System.out.print("Sorted: " + min + " " + mid + " " + max);
+				}
+				
+			}
+			else {
+				max = c;
+				mid = a;
+				min = b;
+				
+				System.out.print("Sorted: " + min + " " + mid + " " + max);
+
+			}
+			
+			
+		}
+		
+	}
+
+}

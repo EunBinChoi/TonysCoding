@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class UpdownGame {
+
+	public static void main(String[] args) {
+		int answer = (int)(Math.random() * 100) + 1;
+		int guess;
+		int tries = 0;
+		Scanner input = new Scanner(System.in);
+		System.out.println("************** Up Down Game **************");
+		while(true) {
+			tries = tries + 1;
+			System.out.print("Guess number : ");
+			guess = input.nextInt(); 
+			if (answer == guess) {
+				System.out.println("You are Correct!");
+				System.out.println("Tries: " + tries);
+				break;
+			}
+			else if (answer > guess) {
+				System.out.println("Your Guess Number < Answer");
+			}
+			else if (answer < guess) {
+				System.out.println("Your Guess Number > Answer");
+			}
+		}
+		
+	}
+
+}

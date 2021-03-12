@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class UpdownGame {
+
+	public static void main(String[] args) {
+		int answer = (int)(Math.random() * 100) + 1;
+		int guess;
+		Scanner input = new Scanner(System.in);
+		System.out.println("************** Up Down Game **************");
+		while(true) {
+			System.out.print("Guess number : ");
+			guess = input.nextInt(); 
+			if (answer == guess) {
+				
+			}
+		}
+	}
+
+}

@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class DiceRolling {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		String answer = "";
+		int diceroll;
+		
+		while (true){
+			System.out.print("주사위 게임을 실행하시겠습니까? (yes or no) => ");
+			answer = input.next();
+			
+			if (answer == "yes") {
+				diceroll = (int)(Math.random() * 6) + 1;
+				System.out.println("현재 주사위 면은 " + diceroll + "입니다");
+			}
+			else if (answer == "no") {
+				
+			}
+		}
+			
+
+	}
+
+}

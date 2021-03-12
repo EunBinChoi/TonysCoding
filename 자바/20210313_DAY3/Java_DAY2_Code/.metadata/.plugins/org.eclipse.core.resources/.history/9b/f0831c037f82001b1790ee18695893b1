@@ -1,0 +1,12 @@
+import java.util.Scanner;
+public class StudentScore {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("총 학생의 수는 ? ");
+		n = input.nextInt();
+
+	}
+
+}

@@ -1,0 +1,75 @@
+import java.util.Scanner;
+public class Day {
+
+	public static void main(String[] args) {
+		
+		// if문에서 해당하는 일수를 다 더해주셨는데 반복문 돌려서 day를 더해준 방법입니다!
+		int year;
+		int month;
+		int day;
+		int total_day = 0;
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Input Year: ");
+		year = sc.nextInt();
+		System.out.print("Input Month(1~12): ");
+		month = sc.nextInt();
+		System.out.print("Input Day(1~31): ");
+		day = sc.nextInt();
+		
+		// 전년도까지의 총합
+		total_day += (year - 1) * 365;
+		// 전년도까지의 윤년의 횟수를 총 일수에 더해줌!
+		total_day += (year - 1) / 4 - (year - 1) / 100 + (year - 1) / 400;
+		
+		int[] lastDay = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+		
+		// 당해연도가 윤년인지 아닌지에 따라서 윤년이면 2월이 29일로 윤년이 아니면 2월이 28로 변경
+		if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)){ // 윤년여부
+			lastDay[1] = 29;
+		}
+		else {
+			lastDay[1] = 28;
+		}
+		
+		// 전월까지 day 수 더하기
+		for (int i = 0; i < month - 1; i++) {
+			total_day += lastDay[i];
+		}
+		
+		// 현재 월의 day 값 더하기
+		total_day += day;
+//				
+		
+		String str_day_of_week = "";
+		switch(total_day % 7) {
+		case 0:
+			str_day_of_week = "일요일";
+			break;
+		case 1:
+			str_day_of_week = "월요일";
+			break;
+		case 2:
+			str_day_of_week = "화요일";
+			break;
+		case 3:
+			str_day_of_week = "수요일";
+			break;
+		case 4:
+			str_day_of_week = "목요일";
+			break;
+		case 5:
+			str_day_of_week = "금요일";
+			break;
+		case 6:
+			str_day_of_week = "토요일";
+			break;
+		}
+		System.out.printf("%d년 %d월 %d일은 %s입니다.",year, month, day, str_day_of_week);
+
+	}
+		
+	
+	}
+
+}

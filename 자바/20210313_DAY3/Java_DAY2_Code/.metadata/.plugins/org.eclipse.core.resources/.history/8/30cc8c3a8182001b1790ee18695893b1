@@ -1,0 +1,15 @@
+
+public class UpdownGame {
+
+	public static void main(String[] args) {
+		int answer = (int)(Math.random() * 100) + 1;
+		
+		
+		System.out.println("************** Up Down Game **************");
+		while(true) {
+			System.out.print("guess number : ");
+			if (answer == guess)
+		}
+	}
+
+}

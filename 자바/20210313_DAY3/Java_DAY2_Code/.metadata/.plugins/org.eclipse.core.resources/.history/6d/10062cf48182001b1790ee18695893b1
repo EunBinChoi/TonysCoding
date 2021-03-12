@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Fibo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a = 0, b = 1, c;
+		int i;
+		
+		Scan
+		for (i = 2; i <= n; i++) {
+			c = a + b;
+			a = b;
+			b = c;
+			System.out.printf("%d, ", c);
+			
+		}
+		System.out.println("...");
+	}
+
+}

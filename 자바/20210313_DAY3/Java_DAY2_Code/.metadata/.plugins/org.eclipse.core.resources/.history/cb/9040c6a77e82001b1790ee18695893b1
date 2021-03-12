@@ -1,0 +1,42 @@
+import java.util.Scanner;
+public class Pythagoras {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.println("중복 포함 (피타고라스)");
+		int cnt = 0;
+				
+		for (int a = 1; a < 100; a ++) {
+			for (int b = 1; b < 100; b ++) {
+				for (int c = 1; c < 100; c ++) {
+					if (c*c == a*a + b*b) {
+						System.out.printf("(a : %d, b : %d, c: %d)\n", a, b, c);
+						cnt ++;
+					}
+					
+				}
+				
+			}
+			
+		}
+		System.out.printf("피타고라스 정리를 만족하는 직각 삼각형의 개수는: %d", cnt);
+		
+		
+		for (int a = 1; a < 100; a ++) {
+			for (int b = 1; b < 100; b ++) {
+				for (int c = 1; c < 100; c ++) {
+					if (c*c == a*a + b*b && a >= b) {
+						System.out.printf("(a : %d, b : %d, c: %d)\n", a, b, c);
+						cnt ++;
+					}
+					
+				}
+				
+			}
+			
+		}
+		System.out.printf("피타고라스 정리를 만족하는 직각 삼각형의 개수는: %d", cnt);
+	}
+
+}
